@@ -1,0 +1,8 @@
+.DS_Store
+yarn-error.log
+
+.idea/
+build/
+cmake-build-debug/
+node_modules/
+
