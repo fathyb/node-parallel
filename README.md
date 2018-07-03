@@ -1,4 +1,4 @@
-# `node-multiprocess`
+# `node-parallel`
 
 Node.js multiprocess library on steroids.
 
