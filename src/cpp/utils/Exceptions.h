@@ -23,6 +23,7 @@ namespace nsb {
         std::string message;
     };
 
+    // When something fails in the standard library
     class StdException: public AddonException {
     public:
         explicit StdException(int error):

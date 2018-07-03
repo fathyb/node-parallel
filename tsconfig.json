@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["es6"],
+
+    "outDir": "build/js",
+    "target": "es6",
+    "module": "commonjs",
+    "importHelpers": true,
+    "sourceMap": true,
+    "declaration": true
+  },
+  "include": [
+    "src/ts/**/*.ts"
+  ]
+}

@@ -1,24 +1,38 @@
 {
   "name": "node-shared-buffer",
   "version": "1.0.0",
-  "main": "build/Release/node-shared-buffer.node",
+  "main": "build/js/index.js",
+  "types": "build/js/index.d.ts",
   "license": "MIT",
+  "files": [
+    "build/js",
+    "build/Release"
+  ],
   "scripts": {
     "cmake:configure": "yarn -s cmake-js print-configure --log-level error",
-    "build": "node-gyp rebuild"
+    "install": "node-pre-gyp install --fallback-to-build",
+    "build": "node-gyp build"
   },
   "devDependencies": {
-    "@types/fs-extra": "^5.0.2",
-    "@types/node": "^10.1.2",
-    "cmake-js": "^3.7.3",
+    "@types/node": "^10.3.1",
+    "@types/q": "^1.5.0",
+    "aws-sdk": "^2.251.1",
     "nan": "^2.10.0",
     "node-gyp": "^3.6.2",
-    "npm-run-all": "^4.1.3",
-    "rimraf": "^2.6.2",
-    "typescript": "^2.8.3"
+    "typescript": "^2.9.1"
   },
   "dependencies": {
-    "fs-extra": "^6.0.1",
-    "tslib": "^1.9.1"
+    "bindings": "^1.3.0",
+    "node-pre-gyp": "^0.10.0",
+    "q": "^1.5.1",
+    "tslib": "^1.9.2"
+  },
+  "bundledDependencies": [
+    "node-pre-gyp"
+  ],
+  "binary": {
+    "module_name": "binding",
+    "module_path": "./build/Release",
+    "host": "https://node-shared-memory.s3.amazonaws.com/"
   }
 }
